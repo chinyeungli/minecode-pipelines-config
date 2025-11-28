@@ -1,4 +1,7 @@
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'
 
 jobs:
   mine-nuget-purls:
@@ -11,6 +14,6 @@ jobs:
         pipelines: "mine_nuget"
       env:
         FEDERATEDCODE_GIT_ACCOUNT_URL: https://github.com/aboutcode-data
-        FEDERATEDCODE_GIT_SERVICE_TOKEN: ${{ secrets.NUGET_MINING_GITHUB_TOKEN }}
+        FEDERATEDCODE_GIT_SERVICE_TOKEN: ${{ secrets.MINING_GITHUB_TOKEN }}
         FEDERATEDCODE_GIT_SERVICE_NAME: "AboutCode Automation"
         FEDERATEDCODE_GIT_SERVICE_EMAIL: "automation@aboutcode.org"
