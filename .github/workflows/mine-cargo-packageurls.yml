@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: aboutcode-org/scancode-action@beta
       with:
-        scancodeio-repo-branch: "minecode-nuget-deployment#egg=scancodeio[mining]"
+        scancodeio-repo-branch: "minecode-git-deployment#egg=scancodeio[mining]"
         pipelines: "mine_cargo"
       env:
         FEDERATEDCODE_GIT_ACCOUNT_URL: https://github.com/aboutcode-data
